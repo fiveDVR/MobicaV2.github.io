@@ -23,12 +23,12 @@
           <img src="ar_hand_prompt.png">
       </div>
       <div class="controls" ,="" id="color-controls" style="vertical-align:middle;margin:0px 10px " >
-        <img src="./Img/Brown.png" width="45" height="45" data-color="#37221A" ></button>
-        <img src="./Img/White.png" width="45" height="45" data-color="#FFFFFF" ></button>
-        <img src="./Img/Black.png" width="45" height="45" data-color="#000000" ></button>
-        <img src="./Img/Red.png" width="45" height="45" data-color="#ff0000"></button>
-        <img src="./Img/Green.png" width="45" height="45" data-color="#00ff00"  ></button>
-        <img src="./Img/Blue.png"  width="45" height="45"  data-color="#0000ff" ></button>
+        <img src="./Img/Colors/0.png" width="45" height="45" data-color="#83675C" ></button>
+        <img src="./Img/Colors/1.png" width="45" height="45" data-color="#513121" ></button>
+        <img src="./Img/Colors/2.png" width="45" height="45" data-color="#727272" ></button>
+        <img src="./Img/Colors/3.png" width="45" height="45" data-color="#000000"></button>
+        <img src="./Img/Colors/4.png" width="45" height="45" data-color="#DAB892"  ></button>
+        <img src="./Img/Colors/5.png"  width="45" height="45"  data-color="#FFFFFF" ></button>
       </div>
     </model-viewer> 
     <script>
@@ -49,10 +49,10 @@
         const colorString = event.target.dataset.color;
         console.log(colorString);
         const material1 = modelViewerColor.model.materials[1];
-        const material2 = modelViewerColor.model.materials[2];
+       // const material2 = modelViewerColor.model.materials[2];
         material1.pbrMetallicRoughness.setBaseColorFactor(colorString);
-        if(material2!=null)
-        material2.pbrMetallicRoughness.setBaseColorFactor(colorString);
+       /* if(material2!=null)
+        material2.pbrMetallicRoughness.setBaseColorFactor(colorString);*/
 
 
       });
