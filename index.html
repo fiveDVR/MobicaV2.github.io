@@ -1,0 +1,80 @@
+<!doctype html>
+<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body> 
+    <style>
+     .list {
+     display: flex;
+     justify-content: center;
+     width: 100%;
+}
+
+ul.myUL {
+  display: inline-block;
+  text-align: left;
+}
+    </style>
+   
+    <img src="./Img/logo.png"  width="250"style="vertical-align:middle;margin:40px 60px ">
+    <img src="./Img/h1.png" width="250"style="vertical-align:middle;margin:40px 60px " >
+
+      <ol  class="container" style="list-style: none;">
+       <li>
+        <img src="./Img/FURNITURE/Chromo.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/SM_Chromo.glb"  />
+        <img src="./Img/FURNITURE/acrylic.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Acrylic.glb">
+        <img src="./Img/FURNITURE/fabric.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Fabric.glb">
+        <img src="./Img/FURNITURE/fabric2.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Fabric_02.glb">
+        <img src="./Img/FURNITURE/metal.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Metal.glb">
+        <img src="./Img/FURNITURE/wood.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Wood.glb">
+        <img src="./Img/FURNITURE/fabricNewLight.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/TRain_Fabric_new_light.glb">
+        <img src="./Img/FURNITURE/Keko.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Keko.glb">
+        <img src="./Img/FURNITURE/pet.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Pet.glb">
+        <img src="./Img/FURNITURE/woodnewLight.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Train_Wood_New_light.glb">
+        <img src="./Img/FURNITURE/Bird.png"  width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/Bird.glb">
+        <img src="./Img/FURNITURE/newOnyx.png"    width="150" height="150"  alt=""onclick="image(this.id)" id="./Chairs/New_Onyx.glb"style="vertical-align:middle;margin:30px 70px ">
+       </li>
+     </ol>
+   
+   
+     <!--  <model-viewer id="color" src="./Chairs/Chair2.glb"   ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">   
+      <div class="progress-bar hide" slot="progress-bar" materials="sdfsdfsdf" >
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+      <div class="controls" ,="" id="color-controls">
+        <button data-color="#ff0000">Red</button>
+        <button data-color="#00ff00">Green</button>
+        <button data-color="#0000ff">Blue</button>
+      </div>
+    </model-viewer> --> 
+     
+    <script src="script.js"></script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+      <script type="text/javascript">
+        function image(id) {
+           // var src = img.src;
+            var myid = id;
+            sessionStorage.setItem("id", myid);
+            console.log(id);
+            window.open('copy.html','_self');
+        }
+        </script>
+  </body>
+</html>

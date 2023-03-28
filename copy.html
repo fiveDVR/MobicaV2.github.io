@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body> 
+ 
+        <model-viewer id="color" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">   
+      <div class="progress-bar hide" slot="progress-bar" materials="sdfsdfsdf" >
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+      <div class="controls" ,="" id="color-controls" style="vertical-align:middle;margin:0px 10px " >
+        <img src="./Img/Brown.png" width="45" height="45" data-color="#37221A" ></button>
+        <img src="./Img/White.png" width="45" height="45" data-color="#FFFFFF" ></button>
+        <img src="./Img/Black.png" width="45" height="45" data-color="#000000" ></button>
+        <img src="./Img/Red.png" width="45" height="45" data-color="#ff0000"></button>
+        <img src="./Img/Green.png" width="45" height="45" data-color="#00ff00"  ></button>
+        <img src="./Img/Blue.png"  width="45" height="45"  data-color="#0000ff" ></button>
+      </div>
+    </model-viewer> 
+    <script>
+      var id2 = sessionStorage.getItem("id");
+      document.getElementById('color').setAttribute("src",id2)
+
+      
+       
+       </script>
+    <script src="script.js"></script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+    <script>
+      const modelViewerColor = document.querySelector("model-viewer#color");
+      
+      document.querySelector('#color-controls').addEventListener('click', (event) => {
+        const colorString = event.target.dataset.color;
+        console.log(colorString);
+        const material1 = modelViewerColor.model.materials[1];
+        const material2 = modelViewerColor.model.materials[2];
+        material1.pbrMetallicRoughness.setBaseColorFactor(colorString);
+        if(material2!=null)
+        material2.pbrMetallicRoughness.setBaseColorFactor(colorString);
+
+
+      });
+      </script>
+      
+  </body>
+
+
+
+
+</html>
